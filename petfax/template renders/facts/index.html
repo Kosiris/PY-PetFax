@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetFax | Facts</title>
+    <link rel="stylesheet" href="petfax\Static\style.css">
+</head>
+<body>
+    <div>
+        <h1>UserFax</h1>
+        {% for fact in facts %}
+            <h4>Submitted by {{ fact.submitter }}</h4>
+            {{ fact.fact }}
+        {% endfor %}
+        <a href="/facts/new">Add a new fact</a>
+        <a href="/pets">Go back to Pets</a>
+    </div>
+</body>
+
+</html>
